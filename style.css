@@ -28,6 +28,7 @@ body {
     radial-gradient(circle at top left, rgba(217, 160, 109, 0.18), transparent 28%),
     radial-gradient(circle at bottom right, rgba(183, 109, 88, 0.12), transparent 24%),
     linear-gradient(180deg, #fcf7ef 0%, #f1e6d7 100%);
+  overflow-x: hidden;
 }
 
 h1,
@@ -1085,15 +1086,23 @@ h3,
   .book-shelf {
     padding: 1.25rem;
   }
+
+  .container {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 767.98px) {
   .section-space {
-    padding: 4.5rem 0;
+    padding: 3.75rem 0;
   }
 
   .navbar-brand {
-    font-size: 1.65rem;
+    font-size: 1.55rem;
+    max-width: 72%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .btn-warm {
@@ -1112,8 +1121,8 @@ h3,
 
   .hero-section .row.min-vh-100 {
     min-height: auto !important;
-    padding-top: 7rem !important;
-    padding-bottom: 2rem !important;
+    padding-top: 6.5rem !important;
+    padding-bottom: 1.5rem !important;
   }
 
   .hero-shell {
@@ -1129,7 +1138,7 @@ h3,
 
   .hero-text,
   .section-text {
-    font-size: 0.98rem;
+    font-size: 0.96rem;
     max-width: none;
   }
 
@@ -1163,6 +1172,10 @@ h3,
 
   .hero-feature-list {
     gap: 0.5rem;
+  }
+
+  .intro-band {
+    margin-top: 0.5rem;
   }
 
   .menu-item,
@@ -1201,8 +1214,20 @@ h3,
     border-radius: 22px;
   }
 
+  .mini-card,
+  .experience-card,
+  .menu-category-card,
+  .info-card,
+  .booking-card,
+  .band-card,
+  .visit-highlight-item,
+  .contact-stack {
+    height: auto;
+    min-height: 0;
+  }
+
   .flower-card img {
-    height: 220px;
+    height: 200px;
   }
 
   .flower-card-body {
@@ -1220,12 +1245,12 @@ h3,
   }
 
   .view-highlight {
-    min-height: 260px;
+    min-height: 230px;
     padding: 1.4rem;
   }
 
   .view-card img {
-    height: 220px;
+    height: 200px;
   }
 
   .view-card-body,
@@ -1237,7 +1262,7 @@ h3,
 
   .quote-panel,
   .gallery-card.tall-card {
-    min-height: 320px;
+    min-height: 260px;
   }
 
   .menu-list-item {
@@ -1245,7 +1270,7 @@ h3,
   }
 
   .page-hero {
-    padding: 7.5rem 0 3.5rem;
+    padding: 6.8rem 0 3rem;
   }
 
   .page-hero .section-title {
@@ -1257,7 +1282,7 @@ h3,
   }
 
   .book-feature-cover {
-    height: 300px;
+    height: 260px;
   }
 
   .book-feature-meta,
@@ -1269,7 +1294,7 @@ h3,
   .book-tile-cover,
   .book-row-cover {
     width: 100%;
-    height: 220px;
+    height: 190px;
   }
 
   .book-tile {
@@ -1290,25 +1315,47 @@ h3,
   .form-control.booking-input {
     font-size: 16px;
   }
+
+  .booking-form .row > [class*="col-"] {
+    width: 100%;
+  }
+
+  .visit-card strong,
+  .contact-stack .visit-row strong {
+    width: 100%;
+  }
 }
 
 @media (max-width: 575.98px) {
   .container,
   .hero-shell {
-    padding-left: 0.85rem;
-    padding-right: 0.85rem;
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
   }
 
   .navbar-brand {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+  }
+
+  .navbar-toggler {
+    padding: 0.45rem 0.6rem;
+  }
+
+  .navbar-collapse {
+    padding: 0.85rem !important;
+  }
+
+  .nav-link {
+    font-size: 0.98rem;
   }
 
   .hero-title {
-    font-size: clamp(2.1rem, 10vw, 2.7rem);
+    font-size: clamp(2rem, 10vw, 2.55rem);
   }
 
   .section-title {
-    font-size: clamp(2rem, 9vw, 2.6rem);
+    font-size: clamp(1.9rem, 8.8vw, 2.45rem);
+    line-height: 1.05;
   }
 
   .d-flex.flex-column.flex-sm-row.gap-3.mt-4 {
@@ -1332,21 +1379,131 @@ h3,
   }
 
   .menu-tabs span {
-    font-size: 0.82rem;
+    font-size: 0.78rem;
     padding: 0.45rem 0.7rem;
+  }
+
+  .menu-board {
+    padding: 1.1rem;
+  }
+
+  .menu-item {
+    gap: 0.55rem;
+    padding: 0.95rem 0;
+  }
+
+  .menu-item h3,
+  .view-card-body h3,
+  .flower-card-body h3,
+  .mini-card h3,
+  .experience-card h3 {
+    font-size: 1.35rem;
+  }
+
+  .menu-item p,
+  .view-card-body p,
+  .flower-card-body p,
+  .mini-card p,
+  .experience-card p,
+  .section-text,
+  .page-lead,
+  .visit-note {
+    font-size: 0.93rem;
+    line-height: 1.65;
+  }
+
+  .menu-item span,
+  .flower-card-body span {
+    font-size: 0.92rem;
+  }
+
+  .hero-backdrop {
+    height: 140px;
+  }
+
+  .feature-panel {
+    padding: 1rem;
+  }
+
+  .mini-card {
+    min-height: 0;
+    padding: 1.05rem;
+  }
+
+  .view-highlight,
+  .quote-panel,
+  .gallery-card,
+  .gallery-card.short-card,
+  .gallery-card.tall-card {
+    border-radius: 22px;
   }
 
   .gallery-card,
   .gallery-card.short-card,
   .gallery-card.tall-card,
   .quote-panel {
-    min-height: 260px;
+    min-height: 220px;
   }
 
   .gallery-card span {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     left: 1rem;
     bottom: 1rem;
+  }
+
+  .book-feature-content,
+  .book-shelf,
+  .book-tile-body,
+  .book-row-body,
+  .info-card,
+  .booking-card,
+  .visit-card,
+  .contact-stack {
+    padding: 1rem;
+  }
+
+  .book-feature h3,
+  .info-card h3,
+  .booking-card h3 {
+    font-size: 1.55rem;
+  }
+
+  .book-feature-cover,
+  .book-tile-cover,
+  .book-row-cover {
+    height: 180px;
+  }
+
+  .book-shelf {
+    border-radius: 24px;
+  }
+
+  .book-feature-meta {
+    gap: 0.4rem;
+  }
+
+  .book-feature-meta strong,
+  .book-feature-meta span,
+  .book-tile-body small,
+  .book-row-body small {
+    font-size: 0.84rem;
+  }
+
+  .contact-stack-header p {
+    font-size: 0.88rem;
+  }
+
+  .visit-row {
+    gap: 0.35rem;
+    padding: 0.85rem 0;
+  }
+
+  .visit-row span {
+    font-size: 0.92rem;
+  }
+
+  .visit-card strong {
+    font-size: 0.98rem;
   }
 
   .site-footer {
