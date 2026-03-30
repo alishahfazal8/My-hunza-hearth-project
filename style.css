@@ -1110,6 +1110,12 @@ h3,
     background-position: center;
   }
 
+  .hero-section .row.min-vh-100 {
+    min-height: auto !important;
+    padding-top: 7rem !important;
+    padding-bottom: 2rem !important;
+  }
+
   .hero-shell {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
@@ -1117,14 +1123,18 @@ h3,
 
   .hero-title {
     max-width: none;
-    font-size: clamp(2.55rem, 12vw, 3.55rem);
-    line-height: 1.02;
+    font-size: clamp(2.35rem, 10.5vw, 3.1rem);
+    line-height: 1.04;
   }
 
   .hero-text,
   .section-text {
-    font-size: 1rem;
+    font-size: 0.98rem;
     max-width: none;
+  }
+
+  .hero-text {
+    margin-bottom: 0;
   }
 
   .hero-feature-card,
@@ -1145,6 +1155,10 @@ h3,
   .info-card h3,
   .booking-card h3 {
     font-size: 1.65rem;
+  }
+
+  .hero-feature-card {
+    display: none;
   }
 
   .hero-feature-list {
@@ -1290,7 +1304,7 @@ h3,
   }
 
   .hero-title {
-    font-size: clamp(2.3rem, 11vw, 3.1rem);
+    font-size: clamp(2.1rem, 10vw, 2.7rem);
   }
 
   .section-title {
@@ -1299,10 +1313,18 @@ h3,
 
   .d-flex.flex-column.flex-sm-row.gap-3.mt-4 {
     width: 100%;
+    margin-top: 1.25rem !important;
   }
 
   .d-flex.flex-column.flex-sm-row.gap-3.mt-4 .btn {
     width: 100%;
+    padding-top: 0.95rem;
+    padding-bottom: 0.95rem;
+  }
+
+  .d-flex.flex-column.flex-sm-row.gap-3.mt-4 .btn-outline-light {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.65);
   }
 
   .menu-tabs {
